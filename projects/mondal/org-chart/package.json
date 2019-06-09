@@ -12,16 +12,16 @@
     "angular 2",
     "angular 8"
   ],
-  "author": "Ashish K. Mondal",
+  "author": "Ashish K Mondal",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nulldev07/org-chart.git"
+    "url": "https://github.com/ashishmondal/mondal-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/nulldev07/org-chart/issues"
+    "url": "https://github.com/ashishmondal/mondal-ui/issues"
   },
-  "homepage": "https://github.com/nulldev07/org-chart",
+  "homepage": "https://github.com/ashishmondal/mondal-ui",
   "peerDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0"
