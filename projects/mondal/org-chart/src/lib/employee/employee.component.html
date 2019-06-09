@@ -1,0 +1,6 @@
+<div ngClass="mui-oc-connector-{{direction}}" class="mui-oc-border" *ngIf="hasManager"></div>
+<div class="mui-oc-box mui-oc-border mui-oc-background">
+  <div class="mui-oc-name">{{employee?.name}}</div>
+  <div class="mui-oc-designation">{{employee?.designation}}</div>
+</div>
+<div ngClass="mui-oc-connector-{{direction}}" class="mui-oc-border" *ngIf="employee?.subordinates.length"></div>

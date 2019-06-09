@@ -1,0 +1,33 @@
+@import "lib/org-chart/org-chart.theme";
+@import "lib/employee/employee.theme";
+.mui-oc {
+  &-horizontal {
+    padding: 1em 0;
+    margin: 1em 0;
+  }
+
+  &-vertical {
+    padding: 0 1em;
+    margin: 0 1em;
+  }
+
+  &-border {
+    border: 1px solid darkgrey;
+  }
+
+  &-box {
+    padding: 0.5em 1em;
+    border-radius: .2em;
+    box-shadow: 0.05em 0.05em 0.2em 0.05em #0000002b;
+  }
+
+  &-connector {
+    &-horizontal {
+      width: 1em;
+    }
+
+    &-vertical {
+      height: 1em;
+    }
+  }
+}

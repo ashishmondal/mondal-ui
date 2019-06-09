@@ -1,0 +1,29 @@
+{
+  "name": "@mondal/org-chart",
+  "version": "8.0.0",
+  "description": "Hierarchical Organizational Chart for Angular",
+  "keywords": [
+    "org-chart",
+    "organization",
+    "organizational chart",
+    "heirarchal chart",
+    "ng",
+    "angular",
+    "angular 2",
+    "angular 8"
+  ],
+  "author": "Ashish K. Mondal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nulldev07/org-chart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nulldev07/org-chart/issues"
+  },
+  "homepage": "https://github.com/nulldev07/org-chart",
+  "peerDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0"
+  }
+}

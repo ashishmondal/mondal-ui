@@ -1,0 +1,15 @@
+<mui-employee *ngIf="topEmployee" ngClass="mui-oc-{{direction}}" [employee]="topEmployee" [hasManager]="hasManager"
+  [direction]="direction">
+</mui-employee>
+<div ngClass="mui-oc-reports-{{direction}}" class="mui-oc-reports">
+  <ng-container *ngFor="let employee of topEmployee?.subordinates; first as isFirst; last as isLast">
+    <div ngClass="mui-oc-org-container-{{direction}}" class="mui-oc-org-container">
+      <div ngClass="mui-oc-connector-container-{{direction}}" class="mui-oc-connector-container">
+        <div class="mui-oc-connector mui-oc-border" [style.border-color]="isFirst?'transparent':''"></div>
+        <div class="mui-oc-border"></div>
+        <div class="mui-oc-connector mui-oc-border" [style.border-color]="isLast?'transparent':''"></div>
+      </div>
+      <mui-org-chart [topEmployee]="employee" [hasManager]="true" [direction]="direction"></mui-org-chart>
+    </div>
+  </ng-container>
+</div>
