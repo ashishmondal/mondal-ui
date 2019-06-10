@@ -1,11 +1,15 @@
 export interface IEmployee {
   name: string;
+  class: string;
+  url: string;
   designation: string;
   subordinates: IEmployee[];
 }
 
 export class Employee implements IEmployee {
   name: string;
+  class: string;
+  url: string;
   designation: string;
   subordinates: Employee[];
   manager?: Employee;

@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 
 import { IEmployee } from '../employee';
 
@@ -11,6 +11,8 @@ export class OrgChartComponent {
   @Input() topEmployee: IEmployee;
   @Input() hasManager = false;
   @Input() direction: 'vertical' | 'horizontal' = 'vertical';
+
+  @Output() itemClick = new EventEmitter<IEmployee>();
 
   @HostBinding('style.flex-direction')
   get hostClass() {
