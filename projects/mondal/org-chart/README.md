@@ -2,10 +2,14 @@
 
 The `mui-org-chart` component displays heirarchal Organizational Chart.
 
+![Org Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/master/projects/mondal/org-chart/org-chart-custom.png)
+
 ## Table of Contents
 
  * [Usage](#usage)
- * [Input Properties](#input-properties)
+ * [Inputs](#inputs)
+ * [Outputs](#outputs)
+ * [Default Look](#default-look)
  * [Custom Styling](#custom-styling)
 
 ## Usage
@@ -110,8 +114,6 @@ export class AppComponent {
 }
 ```
 
-![Horizontal Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/master/projects/mondal/org-chart/org-chart-h.png)
-
 ## Inputs
 
 | Name | Type | Description
@@ -125,59 +127,49 @@ export class AppComponent {
 |---|---|---|
 |`itemClick`|`Employee`| The `Employee` object which was clicked
 
-## Default Render
+## Default Look
 
 ### Horizontal
 
-![Horizontal Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/develop/projects/mondal/org-chart/org-chart-h.png)
+![Horizontal Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/master/projects/mondal/org-chart/org-chart-h.png)
 
 ### Vertical
 
-![Vertical Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/develop/projects/mondal/org-chart/org-chart-v.png)
+![Vertical Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/master/projects/mondal/org-chart/org-chart-v.png)
 
 
 ## Custom Styling
 You can override default styles with your custom SCSS. Make sure you include your custom SCSS *after* including the default SCSS so that your styles override the default styles.
+
 ```scss
-
-.mui-oc {
-  &-name {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-
-  &-designation {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+.mui-oc-name {
+  font-family: 'Patua One', cursive;
 }
-.mui-oc {
-  &-horizontal {
-    padding: 1em 0;
-    margin: 1em 0;
-  }
 
-  &-vertical {
-    padding: 0 1em;
-    margin: 0 1em;
-  }
+.mui-oc-designation {
+  font-family: 'Oswald', sans-serif;
+}
 
-  &-border {
-    border: 1px solid darkgrey;
-  }
+.mui-oc-border {
+  border-color: #9E9E9E;
+}
 
-  &-box {
-    padding: 0.5em 1em;
-    border-radius: .2em;
-    box-shadow: 0.05em 0.05em 0.2em 0.05em #0000002b;
-  }
+.mui-oc-box {
+  color: white;
+  width: 10em;
+}
 
-  &-connector {
-    &-horizontal {
-      width: 1em;
-    }
-
-    &-vertical {
-      height: 1em;
-    }
-  }
+// Custom cssClass from Employee object
+.mui-oc-ceo {
+  background-color: #4caf50;
+}
+.mui-oc-vp {
+  background-color: #03A9F4;
+}
+.mui-oc-dir {
+  background-color: #607D8B;
+}
+.mui-oc-man {
+  background-color: #9C27B0;
 }
 ```
