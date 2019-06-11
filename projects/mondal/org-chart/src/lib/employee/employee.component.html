@@ -1,6 +1,8 @@
 <div ngClass="mui-oc-connector-{{direction}}" class="mui-oc-border" *ngIf="hasManager"></div>
-<div [ngClass]="employee?.class" class="mui-oc-box mui-oc-border mui-oc-background" (click)="itemClick.emit(employee)">
-  <div class="mui-oc-image" [ngStyle]="{ 'background-image': 'url(\''+ employee?.url+'\')'}"></div>
+<div [ngClass]="employee?.cssClass" class="mui-oc-box mui-oc-border mui-oc-background"
+  (click)="itemClick.emit(employee)">
+  <div *ngIf="employee?.imageUrl" class="mui-oc-image mui-oc-border"
+    [ngStyle]="{ 'background-image': 'url(\''+ employee?.imageUrl+'\')'}"></div>
   <div>
     <div class="mui-oc-name">{{employee?.name}}</div>
     <div class="mui-oc-designation">{{employee?.designation}}</div>

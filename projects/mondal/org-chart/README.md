@@ -10,6 +10,16 @@ The `mui-org-chart` component displays heirarchal Organizational Chart.
 
 ## Usage
 
+Each employee is represented by an object with the following properties. Note that all the properties are optional.
+
+| Property | Type| Description |
+|---|---|---|
+|`name`|`string`| The name of the employee |
+|`cssClass`|`string`| The CSS class to apply to the employee block|
+|`imageUrl`|`string`| URL to the employee's image
+|`designation`|`string`| Employee's designation
+|`subordinates`|`Employee[]`| An array of subordinate employees
+
 ### Installation
 
 ```sh
@@ -102,19 +112,28 @@ export class AppComponent {
 
 ![Horizontal Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/master/projects/mondal/org-chart/org-chart-h.png)
 
-## Input Properties
+## Inputs
 
-*direction*: `vertical` or `horizontal` 
+| Name | Type | Description
+|---|---|---|
+|`topEmployee`| `Employee` object| The `Employe` object mentioned above
+|`direction`| `vertical` or `horizontal` | Renders chart vertically or horizontally
 
-Here is the rendered output:
+## Outputs
+
+|Name |Parameters | Description
+|---|---|---|
+|`itemClick`|`Employee`| The `Employee` object which was clicked
+
+## Default Render
 
 ### Horizontal
 
-![Horizontal Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/master/projects/mondal/org-chart/org-chart-h.png)
+![Horizontal Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/develop/projects/mondal/org-chart/org-chart-h.png)
 
 ### Vertical
 
-![Vertical Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/master/projects/mondal/org-chart/org-chart-v.png)
+![Vertical Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/develop/projects/mondal/org-chart/org-chart-v.png)
 
 
 ## Custom Styling
