@@ -10,6 +10,16 @@ The `mui-org-chart` component displays heirarchal Organizational Chart.
 
 ## Usage
 
+Each employee is represented by an object with the following properties. Note that all the properties are optional.
+
+| Property | Type| Description |
+|---|---|---|
+|`name`|`string`| The name of the employee |
+|`cssClass`|`string`| The CSS class to apply to the employee block|
+|`imageUrl`|`string`| URL to the employee's image
+|`designation`|`string`| Employee's designation
+|`subordinates`|`Employee[]`| An array of subordinate employees
+
 ### Installation
 
 ```sh
@@ -100,33 +110,74 @@ export class AppComponent {
 }
 ```
 
-Here is the rendered output:
+![Horizontal Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/master/projects/mondal/org-chart/org-chart-h.png)
 
-![Sample Organizational Chart](https://raw.githubusercontent.com/nulldev07/org-chart/master/sample-org-chart.png)
+## Inputs
 
-## Input Properties
+| Name | Type | Description
+|---|---|---|
+|`topEmployee`| `Employee` object| The `Employe` object mentioned above
+|`direction`| `vertical` or `horizontal` | Renders chart vertically or horizontally
 
-*direction*: `vertical` or `horizontal` 
+## Outputs
+
+|Name |Parameters | Description
+|---|---|---|
+|`itemClick`|`Employee`| The `Employee` object which was clicked
+
+## Default Render
+
+### Horizontal
+
+![Horizontal Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/develop/projects/mondal/org-chart/org-chart-h.png)
+
+### Vertical
+
+![Vertical Chart](https://raw.githubusercontent.com/ashishmondal/mondal-ui/develop/projects/mondal/org-chart/org-chart-v.png)
+
 
 ## Custom Styling
-You can override default styles with your custom CSS. Make sure you include your custom CSS *after* including the default CSS so that your styles override the default styles.
-```css
-.oc-border {
-  border: 1px solid green;
-}
+You can override default styles with your custom SCSS. Make sure you include your custom SCSS *after* including the default SCSS so that your styles override the default styles.
+```scss
 
-.oc-background {
-  background-color: limegreen;
-}
+.mui-oc {
+  &-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
 
-.oc-name {
-  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-  white-space: nowrap;
+  &-designation {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
 }
+.mui-oc {
+  &-horizontal {
+    padding: 1em 0;
+    margin: 1em 0;
+  }
 
-.oc-designation {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-style: italic;
-  white-space: nowrap;
+  &-vertical {
+    padding: 0 1em;
+    margin: 0 1em;
+  }
+
+  &-border {
+    border: 1px solid darkgrey;
+  }
+
+  &-box {
+    padding: 0.5em 1em;
+    border-radius: .2em;
+    box-shadow: 0.05em 0.05em 0.2em 0.05em #0000002b;
+  }
+
+  &-connector {
+    &-horizontal {
+      width: 1em;
+    }
+
+    &-vertical {
+      height: 1em;
+    }
+  }
 }
 ```

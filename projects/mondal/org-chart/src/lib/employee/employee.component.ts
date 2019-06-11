@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { IEmployee } from '../employee';
 
@@ -12,4 +12,6 @@ export class EmployeeComponent {
   @Input() employee: IEmployee;
   @Input() hasManager = false;
   @Input() direction: 'vertical' | 'horizontal' = 'vertical';
+
+  @Output() itemClick = new EventEmitter<IEmployee>();
 }

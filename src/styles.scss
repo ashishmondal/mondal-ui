@@ -1,8 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css?family=Oswald|Patua+One&display=swap');
 @import "dist/mondal/org-chart/_theming.scss";
 
 html, body {
   display: flex;
   flex: 1;
+}
+
+.mui-oc-name {
+  font-family: 'Patua One', cursive;
+}
+
+.mui-oc-designation {
+  font-family: 'Oswald', sans-serif;
+}
+
+.mui-oc-border {
+  border-color: #9E9E9E;
+}
+
+.mui-oc-box {
+  color: white;
+  width: 10em;
+}
+
+.mui-oc-ceo {
+  background-color: #4caf50;
+}
+.mui-oc-vp {
+  background-color: #03A9F4;
+}
+.mui-oc-dir {
+  background-color: #607D8B;
+}
+.mui-oc-man {
+  background-color: #9C27B0;
 }
