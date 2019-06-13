@@ -29,7 +29,7 @@ export class Employee implements IEmployee {
         previous[previous.length - 1].push(current);
 
         return previous;
-      }, <string[][]>[])
+      }, [] as string[][])
       .map(r => new Employee(r, this));
   }
 }
