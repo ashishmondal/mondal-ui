@@ -7,9 +7,6 @@ node_js:
 branches:
   only:
   - master
-
-tags:
-  only:
   - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 
 before_install:
