@@ -1,7 +1,7 @@
 <mui-employee *ngIf="topEmployee" ngClass="mui-oc-{{direction}}" [employee]="topEmployee" [hasManager]="hasManager"
   [direction]="direction" (itemClick)="itemClick.emit($event)">
 </mui-employee>
-<div ngClass="mui-oc-reports-{{direction}}" class="mui-oc-reports">
+<div *ngIf="topEmployee?.subordinates?.length" ngClass="mui-oc-reports-{{direction}}" class="mui-oc-reports">
   <ng-container *ngFor="let employee of topEmployee?.subordinates; first as isFirst; last as isLast">
     <div ngClass="mui-oc-org-container-{{direction}}" class="mui-oc-org-container">
       <div ngClass="mui-oc-connector-container-{{direction}}" class="mui-oc-connector-container">

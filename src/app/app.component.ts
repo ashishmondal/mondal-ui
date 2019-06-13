@@ -7,60 +7,61 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   topEmployee: any = {
-    name: 'Janis Martin',
+    name: 'Sundar Pichai',
     cssClass: 'mui-oc-ceo',
     imageUrl: 'assets/employee.svg',
-    designation: 'CEO',
+    designation: 'Chief Executive Officer',
     subordinates: [
       {
-        name: 'Matthew Wikes',
-        cssClass: 'mui-oc-vp',
+        name: 'Thomas Kurian',
+        cssClass: 'mui-oc-ceo',
         imageUrl: 'assets/employee.svg',
-        designation: 'VP',
-        subordinates: [
-          {
-            name: 'Tina Landry',
-            cssClass: 'mui-oc-man',
-            imageUrl: 'assets/employee.svg',
-            designation: 'Budget Analyst',
-            subordinates: []
-          }
-
-        ]
+        designation: 'CEO, Google Cloud',
       },
       {
-        name: 'Patricia Lyons',
-        cssClass: 'mui-oc-vp',
+        name: 'Susan Wojcicki',
+        cssClass: 'mui-oc-ceo',
         imageUrl: 'assets/employee.svg',
-        designation: 'VP',
+        designation: 'CEO, YouTube',
         subordinates: [
           {
-            name: 'Dylan Wilson',
-            cssClass: 'mui-oc-dir',
+            name: 'Beau Avril',
+            cssClass: 'mui-oc-head',
             imageUrl: 'assets/employee.svg',
-            designation: 'Web Manager',
+            designation: 'Global Head of Business Operations',
             subordinates: []
           },
           {
-            name: 'Deb Curtis',
-            cssClass: 'mui-oc-dir',
+            name: 'Tara Walpert Levy',
+            cssClass: 'mui-oc-vp',
             imageUrl: 'assets/employee.svg',
-            designation: 'Art Director',
+            designation: 'VP, Agency and Brand Solutions',
+            subordinates: []
+          },
+          {
+            name: 'Ariel Bardin',
+            cssClass: 'mui-oc-vp',
+            imageUrl: 'assets/employee.svg',
+            designation: 'VP, Product Management',
             subordinates: []
           }
         ]
       },
       {
-        name: 'Larry Phung',
-        cssClass: 'mui-oc-vp',
+        name: 'Jeff Dean',
+        cssClass: 'mui-oc-head',
         imageUrl: 'assets/employee.svg',
-        designation: 'VP',
-        subordinates: []
+        designation: 'Head of Artificial Intelligence',
+        subordinates: [
+          {
+            name: 'David Feinberg',
+            cssClass: 'mui-oc-ceo',
+            imageUrl: 'assets/employee.svg',
+            designation: 'CEO, Google Health',
+            subordinates: []
+          }
+        ]
       }
     ]
   };
-
-  test(emp: any) {
-    console.log(emp);
-  }
 }
